@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Favorite Destination - Manali</title>
+
+    <style>
+        /* ---------------- GENERAL STYLING ---------------- */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        /* ---------------- HEADER ---------------- */
+
+        header {
+            background-color: #12372A;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-bottom: 5px solid #ADBC9F;
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        /* ---------------- NAVIGATION ---------------- */
+
+        nav {
+            background-color: #1B4D3E;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            color: #ADBC9F;
+        }
+
+        /* ---------------- MAIN ---------------- */
+
+        main {
+            width: 100%;
+        }
+
+        /* Common section styling */
+
+        section {
+            width: 100%;
+            min-height: 500px;
+            padding: 80px 10%;
+            border-bottom: 5px solid white;
+        }
+
+        section h2 {
+            margin-bottom: 25px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* ---------------- SECTION 1 ---------------- */
+        /* Linear Gradient */
+
+        #about {
+            background: linear-gradient(
+                120deg,
+                #dff6ff,
+                #b8e0f2,
+                #7cc4e4
+            );
+
+            background-attachment: fixed;
+        }
+
+        #about h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #12372A;
+        }
+
+        .about-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            margin-top: 25px;
+            border: 3px solid #1B4D3E;
+            border-radius: 10px;
+        }
+
+        /* ---------------- SECTION 2 ---------------- */
+        /* Radial Gradient */
+
+        #places {
+            background: radial-gradient(
+                circle,
+                #fff3b0,
+                #ffd166,
+                #f4a261
+            );
+
+            background-attachment: fixed;
+        }
+
+        #places h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #7f2d00;
+        }
+
+        .places-container {
+            display: flex;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .place {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 25px;
+            border: 3px solid #e76f51;
+            border-radius: 10px;
+        }
+
+        .place h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* ---------------- SECTION 3 ---------------- */
+        /* Parallax-like background */
+
+        #activities {
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url("https://images.unsplash.com/photo-1517825738774-7de9363ef735");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: white;
+        }
+
+        #activities h2 {
+            font-size: 42px;
+            font-weight: 900;
+        }
+
+        .activity-box {
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.55);
+            padding: 30px;
+            margin-top: 30px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        .activity-box ul {
+            margin-left: 25px;
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        /* ---------------- SECTION 4 ---------------- */
+
+        #travel {
+            background-color: #e8f5e9;
+        }
+
+        #travel h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1B4D3E;
+        }
+
+        .travel-info {
+            background-color: white;
+            padding: 30px;
+            margin-top: 25px;
+            border-left: 7px solid #1B4D3E;
+            border-radius: 5px;
+        }
+
+        .travel-info p {
+            margin: 12px 0;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            background-color: #12372A;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-top: 5px solid #ADBC9F;
+        }
+
+        footer p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media (max-width: 700px) {
+
+            .places-container {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Explore Manali</h1>
+        <p>My Favorite Destination in the Mountains</p>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#places">Places</a>
+        <a href="#activities">Activities</a>
+        <a href="#travel">Travel Info</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- SECTION 1 -->
+        <section id="about">
+
+            <h2>About Manali</h2>
+
+            <div class="about-box">
+
+                <p>
+                    Manali is a beautiful hill station located in
+                    Himachal Pradesh, India. It is famous for its
+                    mountains, rivers, forests and pleasant weather.
+                </p>
+
+                <p>
+                    The peaceful environment and beautiful landscapes
+                    make Manali a popular destination for nature lovers
+                    and travelers.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2 -->
+        <section id="places">
+
+            <h2>Popular Places to Visit</h2>
+
+            <div class="places-container">
+
+                <div class="place">
+                    <h3>Solang Valley</h3>
+                    <p>
+                        Solang Valley is known for its beautiful
+                        mountain views and outdoor activities.
+                    </p>
+                </div>
+
+                <div class="place">
+                    <h3>Rohtang Pass</h3>
+                    <p>
+                        Rohtang Pass is famous for its snow-covered
+                        mountains and scenic landscapes.
+                    </p>
+                </div>
+
+                <div class="place">
+                    <h3>Hadimba Temple</h3>
+                    <p>
+                        Hadimba Temple is an ancient temple surrounded
+                        by beautiful cedar forests.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 3 -->
+        <section id="activities">
+
+            <h2>Things to Do</h2>
+
+            <div class="activity-box">
+
+                <ul>
+                    <li>Enjoy mountain views</li>
+                    <li>Explore local markets</li>
+                    <li>Visit beautiful temples</li>
+                    <li>Enjoy nature walks</li>
+                    <li>Experience the local culture</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 4 -->
+        <section id="travel">
+
+            <h2>Travel Information</h2>
+
+            <div class="travel-info">
+
+                <p>
+                    <strong>Best Time:</strong>
+                    October to June
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Himachal Pradesh, India
+                </p>
+
+                <p>
+                    <strong>Famous For:</strong>
+                    Mountains, snow, nature and adventure
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Explore Manali | Created for HTML & CSS Practice
+        </p>
+
+    </footer>
+
+</body>
+</html>

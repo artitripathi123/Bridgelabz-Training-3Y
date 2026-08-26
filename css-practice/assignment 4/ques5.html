@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pricing Plans</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #222;
+            min-height: 100vh;
+        }
+
+        /* Main Container */
+        .pricing-section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        /* Heading */
+        .pricing-section h1 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #172554;
+        }
+
+        /* Pricing Container */
+        .pricing-container {
+            display: flex;
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        /* Pricing Card */
+        .plan {
+            flex: 1;
+            min-height: 500px;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 30px;
+            background-color: white;
+
+            border: 2px solid #d1d5db;
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            /* Smooth transition */
+            transition: transform 0.3s ease,
+                        background-color 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .plan:hover {
+            transform: scale(1.05);
+            background-color: #eff6ff;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Plan Heading */
+        .plan h2 {
+            font-size: 28px;
+            color: #172554;
+            margin-bottom: 20px;
+        }
+
+        /* Price */
+        .price {
+            font-size: 35px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 25px;
+        }
+
+        .price span {
+            font-size: 16px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        /* Features */
+        .features {
+            list-style: none;
+            text-align: left;
+
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .features li::before {
+            content: "✓ ";
+            color: #16a34a;
+            font-weight: bold;
+        }
+
+        /* Button */
+        .btn {
+            display: block;
+            margin-top: auto;
+
+            padding: 13px;
+            background-color: #2563eb;
+            color: white;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            border-radius: 8px;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Popular Plan */
+        .popular {
+            border: 4px solid #f59e0b;
+            background-color: #fffbeb;
+            position: relative;
+        }
+
+        .popular h2 {
+            color: #b45309;
+        }
+
+        /* Popular Label */
+        .popular-label {
+            background-color: #f59e0b;
+            color: white;
+
+            padding: 6px 15px;
+
+            position: absolute;
+            top: -16px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            border-radius: 20px;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+
+            .pricing-container {
+                flex-direction: column;
+            }
+
+            .plan {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="pricing-section">
+
+        <h1>Choose Your Plan</h1>
+
+        <div class="pricing-container">
+
+            <!-- Basic Plan -->
+            <div class="plan">
+
+                <h2>Basic</h2>
+
+                <div class="price">
+                    ₹199 <span>/month</span>
+                </div>
+
+                <ul class="features">
+                    <li>5 GB Storage</li>
+                    <li>Basic Support</li>
+                    <li>1 User Account</li>
+                    <li>Basic Features</li>
+                </ul>
+
+                <a href="#" class="btn">Get Started</a>
+
+            </div>
+
+
+            <!-- Standard Plan -->
+            <div class="plan popular">
+
+                <div class="popular-label">
+                    MOST POPULAR
+                </div>
+
+                <h2>Standard</h2>
+
+                <div class="price">
+                    ₹499 <span>/month</span>
+                </div>
+
+                <ul class="features">
+                    <li>50 GB Storage</li>
+                    <li>Priority Support</li>
+                    <li>5 User Accounts</li>
+                    <li>Advanced Features</li>
+                    <li>Regular Updates</li>
+                </ul>
+
+                <a href="#" class="btn">Choose Standard</a>
+
+            </div>
+
+
+            <!-- Premium Plan -->
+            <div class="plan">
+
+                <h2>Premium</h2>
+
+                <div class="price">
+                    ₹999 <span>/month</span>
+                </div>
+
+                <ul class="features">
+                    <li>Unlimited Storage</li>
+                    <li>24/7 Support</li>
+                    <li>Unlimited Users</li>
+                    <li>All Advanced Features</li>
+                    <li>Premium Updates</li>
+                    <li>Extra Security</li>
+                </ul>
+
+                <a href="#" class="btn">Choose Premium</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

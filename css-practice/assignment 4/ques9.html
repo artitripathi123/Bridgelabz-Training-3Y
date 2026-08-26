@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Magazine Layout</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page */
+        body {
+            background-color: #e5e7eb;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #222;
+            padding: 30px;
+        }
+
+        /* Main Content */
+        .newspaper {
+            max-width: 1100px;
+            margin: auto;
+
+            background-color: #fff;
+
+            padding: 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Main Heading */
+        h1 {
+            column-span: all;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+            font-size: 42px;
+            font-weight: 900;
+
+            color: #172554;
+
+            border-bottom: 4px solid #172554;
+
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Article Text */
+        .article {
+            column-count: 3;
+            column-gap: 40px;
+
+            text-align: justify;
+
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* Paragraph */
+        .article p {
+            margin-bottom: 20px;
+        }
+
+        /* First paragraph */
+        .article p:first-child::first-letter {
+            font-size: 55px;
+            font-weight: bold;
+            float: left;
+
+            line-height: 0.8;
+            margin-right: 8px;
+            color: #b91c1c;
+        }
+
+        /* Image floated to left */
+        .article img {
+            width: 180px;
+            height: 130px;
+
+            object-fit: cover;
+
+            float: left;
+
+            margin: 5px 20px 10px 0;
+
+            border-radius: 6px;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Subheading */
+        .article h2 {
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+
+            color: #b91c1c;
+
+            margin: 15px 0;
+        }
+
+        /* Responsive - Tablet */
+        @media (max-width: 900px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .newspaper {
+                padding: 30px;
+            }
+
+            .article {
+                column-count: 2;
+                column-gap: 30px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .newspaper {
+                padding: 20px;
+            }
+
+            .article {
+                column-count: 1;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .article img {
+                width: 140px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="newspaper">
+
+        <!-- Heading spanning all columns -->
+        <h1>The Future of Technology</h1>
+
+        <div class="article">
+
+            <p>
+                Technology has become an important part of modern life.
+                From smartphones and computers to artificial intelligence,
+                technology continues to change the way people work, learn,
+                communicate and entertain themselves.
+            </p>
+
+            <!-- Floating Image -->
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                alt="Technology">
+
+            <p>
+                The development of digital technology has made information
+                available to people around the world. The internet allows
+                students to access educational resources, businesses to
+                communicate with customers, and people to stay connected
+                with friends and family.
+            </p>
+
+            <h2>Digital Innovation</h2>
+
+            <p>
+                Innovation is one of the major driving forces behind
+                technological progress. New software, devices and digital
+                services are introduced every year. These innovations can
+                make everyday tasks faster, easier and more convenient.
+            </p>
+
+            <p>
+                Artificial intelligence is also becoming an important
+                technology in many industries. It can help organizations
+                analyze information, automate repetitive tasks and improve
+                decision-making. However, technology should always be used
+                responsibly and carefully.
+            </p>
+
+            <p>
+                Education has also changed because of technology. Online
+                courses, digital libraries and educational applications
+                provide students with many opportunities to learn outside
+                traditional classrooms.
+            </p>
+
+            <p>
+                Another important area is cybersecurity. As more information
+                is stored online, protecting personal and organizational data
+                has become increasingly important. Strong passwords, secure
+                systems and responsible online behavior can help protect
+                digital information.
+            </p>
+
+            <h2>Looking Ahead</h2>
+
+            <p>
+                The future will likely bring even more technological
+                developments. New ideas in robotics, artificial intelligence,
+                communication and computing may transform many areas of
+                society. Learning new skills will help people adapt to these
+                changes.
+            </p>
+
+            <p>
+                Technology has the potential to improve people's lives when
+                it is designed and used thoughtfully. The challenge is to
+                balance innovation with privacy, security, accessibility and
+                responsible use.
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

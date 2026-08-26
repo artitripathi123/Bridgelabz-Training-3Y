@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 30px;
+
+            background-color: #172554;
+            color: white;
+
+            z-index: 1000;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        header span {
+            font-size: 16px;
+        }
+
+        /* Dashboard Layout */
+        .dashboard {
+            display: flex;
+
+            /* Space for fixed header */
+            padding-top: 70px;
+
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+
+            min-height: calc(100vh - 70px);
+
+            background-color: #1e293b;
+
+            padding: 30px 20px;
+
+            position: relative;
+        }
+
+        .sidebar h2 {
+            color: white;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sidebar nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+
+            padding: 12px 15px;
+
+            border-radius: 6px;
+
+            transition: background-color 0.3s,
+                        color 0.3s;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+
+            padding: 35px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 25px;
+        }
+
+        .main-content h2 {
+            font-size: 30px;
+            color: #172554;
+        }
+
+        /* Content Boxes Container */
+        .boxes {
+            display: flex;
+            gap: 25px;
+        }
+
+        /* Content Box */
+        .box {
+            flex: 1;
+
+            min-height: 200px;
+
+            padding: 25px;
+
+            background-color: white;
+
+            border-radius: 12px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .box h3 {
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .box p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Statistics */
+        .number {
+            font-size: 35px;
+            font-weight: bold;
+            color: #172554;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+
+            .dashboard {
+                flex-direction: column;
+            }
+
+            /* Sidebar stacks above content */
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .sidebar nav {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .main-content {
+                padding: 25px 20px;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+
+            header {
+                padding: 0 15px;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        <h1>My Dashboard</h1>
+        <span>Welcome, Arti</span>
+    </header>
+
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Menu</h2>
+
+            <nav>
+                <a href="#">🏠 Dashboard</a>
+                <a href="#">👤 Profile</a>
+                <a href="#">📊 Analytics</a>
+                <a href="#">⚙️ Settings</a>
+                <a href="#">🚪 Logout</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <h2>Overview</h2>
+
+            <!-- Content Boxes -->
+            <div class="boxes">
+
+                <!-- Box 1 -->
+                <div class="box">
+
+                    <h3>Total Users</h3>
+
+                    <p>
+                        Number of registered users on the platform.
+                    </p>
+
+                    <div class="number">
+                        1,250
+                    </div>
+
+                </div>
+
+
+                <!-- Box 2 -->
+                <div class="box">
+
+                    <h3>Projects</h3>
+
+                    <p>
+                        Total number of active projects currently
+                        being worked on.
+                    </p>
+
+                    <div class="number">
+                        48
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Additional Content Box -->
+            <div class="box">
+
+                <h3>Recent Activity</h3>
+
+                <p>
+                    Your latest dashboard activities and updates
+                    will appear here. You can use this section
+                    to display reports, notifications or other
+                    useful information.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
