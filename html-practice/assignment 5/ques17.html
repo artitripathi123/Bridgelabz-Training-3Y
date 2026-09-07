@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission</title>
+</head>
+<body>
+
+    <h2>My Form</h2>
+
+    <form onsubmit="document.getElementById('resultFrame').srcdoc='<p>Form successfully submitted.</p>'; return false;">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    <iframe id="resultFrame" width="400" height="100"></iframe>
+
+</body>
+</html>
