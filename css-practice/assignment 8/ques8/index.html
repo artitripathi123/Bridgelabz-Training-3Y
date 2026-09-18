@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Box-Sizing Comparison</h1>
+
+        <p class="description">
+            Both boxes have the same width, padding, and border.
+            The difference is how CSS calculates their total size.
+        </p>
+
+        <div class="comparison">
+
+            <div class="box content-box">
+                <h2>Content-Box</h2>
+                <p>
+                    Default box-sizing. Width applies only to the content.
+                    Padding and border are added outside the given width.
+                </p>
+                <strong>Total width becomes larger.</strong>
+            </div>
+
+            <div class="box border-box">
+                <h2>Border-Box</h2>
+                <p>
+                    Width includes content, padding, and border.
+                    The total size remains within the specified width.
+                </p>
+                <strong>Total width stays fixed.</strong>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

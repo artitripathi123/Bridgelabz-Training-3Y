@@ -1,0 +1,93 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Element Selector */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Class Selector */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Attribute Selector: selects input elements with type="text" */
+input[type="text"] {
+    border: 2px solid #3498db;
+    padding: 10px;
+    margin: 8px;
+}
+
+/* Attribute Selector: selects links whose href starts with https */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* Pseudo-class :hover */
+a:hover {
+    color: red;
+}
+
+/* Pseudo-class :focus */
+input:focus {
+    outline: 3px solid #f1c40f;
+    background-color: #fffbea;
+}
+
+/* Pseudo-class :nth-child() */
+.items li:nth-child(odd) {
+    background-color: #dfe6e9;
+}
+
+.items li:nth-child(even) {
+    background-color: #b2bec3;
+}
+
+/* Descendant Combinator: selects all p inside .parent */
+.parent p {
+    color: #8e44ad;
+}
+
+/* Child Combinator > : selects only direct children */
+.parent > p {
+    font-weight: bold;
+}
+
+/* Adjacent Sibling Combinator + : selects p immediately after div */
+.parent div + p {
+    color: #e67e22;
+}
+
+/* General Sibling Combinator ~ : selects all p after div */
+.parent div ~ p {
+    text-decoration: underline;
+}
+
+/* Pseudo-element ::before */
+.items li::before {
+    content: "✓ ";
+    color: green;
+    font-weight: bold;
+}
+
+/* Pseudo-element ::after */
+.items li::after {
+    content: " •";
+    color: #3498db;
+}

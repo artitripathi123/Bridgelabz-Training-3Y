@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f6f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2c3e50;
+}
+
+/* Intro Paragraph */
+.intro {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    color: #555;
+}
+
+/* Article Heading */
+article h2,
+.font-examples h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #34495e;
+    margin-top: 30px;
+}
+
+/* Article Text */
+.article-text {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.9;
+    letter-spacing: 0.4px;
+    text-align: justify;
+}
+
+/* First Letter Pseudo-element */
+.article-text::first-letter {
+    font-size: 38px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* First Line Pseudo-element */
+.article-text::first-line {
+    font-weight: 600;
+}
+
+/* Mark Element */
+mark {
+    background-color: #ffeaa7;
+    color: #d35400;
+    padding: 3px 6px;
+}
+
+/* Strong Element */
+strong {
+    color: #2980b9;
+    font-weight: 700;
+}
+
+/* Em Element */
+em {
+    color: #8e44ad;
+    font-style: italic;
+}
+
+/* Quote */
+.quote {
+    text-align: center;
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #16a085;
+    padding: 20px;
+}
+
+/* Font Family Examples */
+.serif {
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.sans {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mono {
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+}

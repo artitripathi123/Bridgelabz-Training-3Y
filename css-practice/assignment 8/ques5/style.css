@@ -1,0 +1,103 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Button alignment using Flexbox */
+.button-collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Common button styling */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
+.primary {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+/* Secondary button */
+.secondary {
+    background-color: #6c757d;
+    color: white;
+    border: 2px solid #6c757d;
+}
+
+/* Outline button */
+.outline {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+/* Disabled button */
+.disabled {
+    background-color: #cccccc;
+    color: #777;
+    border: 2px solid #cccccc;
+    cursor: not-allowed;
+}
+
+/* Hover effect for primary and secondary buttons */
+.primary:hover,
+.secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for outline button */
+.outline:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Active effect when button is clicked */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Focus effect when button receives keyboard focus */
+.btn:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
+}
+
+/* Disabled pseudo-class */
+.btn:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}

@@ -1,0 +1,81 @@
+/* Element selector: styles all paragraph elements */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Class selector: styles elements with class="highlight" */
+.highlight {
+    background-color: #fff3cd;
+    padding: 8px;
+    border-left: 4px solid orange;
+}
+
+/* ID selector: styles the element with id="main-heading" */
+#main-heading {
+    color: #1d3557;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Attribute selector: styles links having target="_blank" */
+a[target="_blank"] {
+    color: #d63384;
+    font-weight: bold;
+}
+
+/* Descendant combinator: styles paragraphs inside .content */
+.content p {
+    margin-bottom: 12px;
+}
+
+/* Child combinator > : styles only direct li children of ul */
+ul > li {
+    padding: 6px;
+    color: #264653;
+}
+
+/* Adjacent sibling combinator + : styles paragraph immediately after h2 */
+h2 + p {
+    color: #6a4c93;
+    font-style: italic;
+}
+
+/* General sibling combinator ~ : styles all paragraphs after h2 */
+h2 ~ p {
+    margin-left: 10px;
+}
+
+/* Main container styling */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+/* Section spacing and alignment */
+section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #1d3557;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}

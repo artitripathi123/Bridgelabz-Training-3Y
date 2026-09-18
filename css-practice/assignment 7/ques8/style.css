@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 35px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Margin Layer */
+.box-model {
+    background-color: #f8c471;
+    padding: 35px;
+    outline: 3px dashed #e67e22;
+}
+
+/* Border Layer */
+.margin-layer {
+    background-color: #f5b7b1;
+    padding: 25px;
+}
+
+/* Border */
+.border-layer {
+    background-color: #ec7063;
+    padding: 20px;
+    border: 10px solid #922b21;
+}
+
+/* Padding Layer */
+.padding-layer {
+    background-color: #aed6f1;
+    padding: 25px;
+}
+
+/* Content Layer */
+.content-layer {
+    background-color: #58d68d;
+    width: 180px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-layer p {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.margin-label {
+    color: #9c640c;
+}
+
+.border-label {
+    color: white;
+}
+
+.padding-label {
+    color: #154360;
+}
+
+.content-label {
+    color: #145a32;
+}
+
+/* Description */
+.description {
+    max-width: 300px;
+    text-align: left;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.description h2 {
+    color: #34495e;
+}
+
+.description p {
+    line-height: 1.6;
+}
+
+/* Comparison Heading */
+.comparison-heading {
+    margin-top: 50px;
+    color: #2c3e50;
+}
+
+/* Comparison Layout */
+.comparison {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Default Box */
+.comparison-box {
+    width: 250px;
+    height: 180px;
+    padding: 25px;
+    border: 8px solid #3498db;
+    background-color: white;
+}
+
+.default-box {
+    box-sizing: content-box;
+}
+
+/* Border Box */
+.border-box {
+    box-sizing: border-box;
+    border-color: #27ae60;
+}
+
+.comparison-box h3 {
+    color: #2c3e50;
+}
+
+.comparison-box p {
+    font-size: 14px;
+    line-height: 1.5;
+}

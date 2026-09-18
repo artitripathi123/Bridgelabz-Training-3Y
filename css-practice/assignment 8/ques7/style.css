@@ -1,0 +1,131 @@
+/* General page styling with soft gradient background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #dbeafe, #fce7f3);
+}
+
+/* Card-like container */
+.card {
+    width: 90%;
+    max-width: 500px;
+    padding: 35px;
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Heading styling */
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #1e293b;
+}
+
+/* Paragraph styling */
+p {
+    text-align: center;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Search bar alignment using Flexbox */
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+/* Input field styling */
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Input focus effect */
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.4);
+}
+
+/* Common button styling */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Search button */
+.search-box button {
+    background-color: #6366f1;
+    color: white;
+}
+
+/* Button hover effect */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons section */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Primary button */
+.primary {
+    background-color: #22c55e;
+    color: white;
+}
+
+/* Secondary button */
+.secondary {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Dropdown section */
+.dropdown-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Dropdown styling */
+select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+}
+
+/* Dropdown focus effect */
+select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.4);
+}
+
+/* Dropdown hover effect */
+select:hover {
+    border-color: #6366f1;
+}

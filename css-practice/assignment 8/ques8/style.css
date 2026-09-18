@@ -1,0 +1,82 @@
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Heading styling */
+h1 {
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+/* Description styling */
+.description {
+    color: #475569;
+    margin-bottom: 30px;
+}
+
+/* Side-by-side comparison using Flexbox */
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+/* Common box styling */
+.box {
+    width: 350px;
+    padding: 25px;
+    border: 5px solid #1e293b;
+    border-radius: 12px;
+    color: white;
+}
+
+/* Default content-box */
+.content-box {
+    box-sizing: content-box;
+    background-color: #ef4444;
+}
+
+/* Border-box */
+.border-box {
+    box-sizing: border-box;
+    background-color: #2563eb;
+}
+
+/* Box headings */
+.box h2 {
+    margin-top: 0;
+}
+
+/* Box paragraphs */
+.box p {
+    line-height: 1.6;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 750px) {
+    .comparison {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    }
+}

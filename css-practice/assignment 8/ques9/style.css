@@ -1,0 +1,119 @@
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* Heading styling */
+h1 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+/* Effects layout using Flexbox */
+.effects {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+/* Individual effect cards */
+.effect-card {
+    flex: 1;
+    min-height: 180px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Common smooth transition */
+.grow-btn,
+.hover-card,
+.animated-link {
+    transition: all 0.3s ease;
+}
+
+/* Button styling */
+.grow-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+/* Button hover: grows and changes color */
+.grow-btn:hover {
+    transform: scale(1.1);
+    background-color: #16a34a;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button active effect */
+.grow-btn:active {
+    transform: scale(0.95);
+}
+
+/* Hover card styling */
+.hover-card {
+    padding: 25px;
+    background-color: #fef3c7;
+    border-radius: 8px;
+}
+
+/* Card hover: moves upward and adds shadow */
+.hover-card:hover {
+    transform: translateY(-8px);
+    background-color: #fde68a;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated link styling */
+.animated-link {
+    color: #7c3aed;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Link hover effect */
+.animated-link:hover {
+    color: #db2777;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    .effects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .effect-card {
+        width: 80%;
+    }
+}

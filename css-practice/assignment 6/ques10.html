@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox + Grid Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header using Flexbox */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #00adb5;
+        }
+
+        /* Main area using Grid */
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            padding: 30px;
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .article,
+        .sidebar {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animated title */
+        .article h1 {
+            margin-bottom: 20px;
+            animation: slideUp 1s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .article p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Three boxes using Flexbox */
+        .boxes {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 15px;
+        }
+
+        .box {
+            flex: 1;
+            background-color: #00adb5;
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar p {
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MyWebsite</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Article Section -->
+        <section class="article">
+            <h1>Welcome to My Website</h1>
+
+            <p>
+                This webpage demonstrates how Flexbox and CSS Grid
+                can be combined to create a responsive layout.
+            </p>
+
+            <div class="boxes">
+                <div class="box">Box 1</div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>
+                This is the sidebar area containing additional
+                information, links, or announcements.
+            </p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>© 2026 MyWebsite. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

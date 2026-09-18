@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr;
+            gap: 20px;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Header spans across all columns */
+        header {
+            grid-column: 1 / -1;
+            background-color: #222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+        }
+
+        .sidebar a:hover {
+            color: #00adb5;
+        }
+
+        /* Main content */
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 150px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* One box spans two columns */
+        .box-wide {
+            grid-column: span 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            header {
+                grid-column: 1;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .box-wide {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header>
+            <h1>Dashboard</h1>
+        </header>
+
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <a href="#">Home</a>
+            <a href="#">Analytics</a>
+            <a href="#">Projects</a>
+            <a href="#">Settings</a>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="box">
+                <h2>Box 1</h2>
+            </div>
+
+            <div class="box">
+                <h2>Box 2</h2>
+            </div>
+
+            <div class="box box-wide">
+                <h2>Box 3 - Spans Two Columns</h2>
+            </div>
+
+            <div class="box">
+                <h2>Box 4</h2>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

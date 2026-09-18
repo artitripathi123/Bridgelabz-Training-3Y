@@ -1,0 +1,179 @@
+/* Apply border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+.header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header navigation */
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Navigation hover effect */
+.header a:hover {
+    color: #facc15;
+}
+
+/* Main content alignment */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Main card */
+.main-card {
+    width: 90%;
+    max-width: 850px;
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    overflow: hidden;
+}
+
+/* Image section */
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+}
+
+/* Form section */
+.form-section {
+    flex: 1;
+    padding: 35px;
+}
+
+.form-section h2 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input and textarea styling */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Focus effects */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+}
+
+/* Buttons layout */
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Common button styling */
+button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Reset button */
+.reset-btn {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+/* Button hover effects */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer styling */
+.footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-card {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        min-height: 220px;
+        height: 220px;
+    }
+
+    .form-section {
+        padding: 25px;
+    }
+}

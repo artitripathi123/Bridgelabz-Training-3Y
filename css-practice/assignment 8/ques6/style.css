@@ -1,0 +1,110 @@
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Main container centered vertically and horizontally */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading styling */
+h1 {
+    color: #222;
+    margin-bottom: 40px;
+}
+
+/* Animation area */
+.animation-area {
+    width: 80%;
+    max-width: 700px;
+    min-height: 350px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Moving box animation */
+.moving-box {
+    width: 120px;
+    padding: 15px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Keyframes for moving box */
+@keyframes moveBox {
+    from {
+        transform: translateX(-150px);
+    }
+
+    to {
+        transform: translateX(150px);
+    }
+}
+
+/* Bouncing ball animation */
+.bouncing-ball {
+    width: 50px;
+    height: 50px;
+    background-color: #e63946;
+    border-radius: 50%;
+
+    animation-name: bounceBall;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+
+/* Keyframes for bouncing ball */
+@keyframes bounceBall {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-80px);
+    }
+}
+
+/* Color changing text animation */
+.color-text {
+    animation-name: changeColor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Keyframes for color changing text */
+@keyframes changeColor {
+    0% {
+        color: #007bff;
+    }
+
+    50% {
+        color: #e63946;
+    }
+
+    100% {
+        color: #2a9d8f;
+    }
+}
