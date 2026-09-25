@@ -1,0 +1,135 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+/* Grid Layout */
+.cheat-sheet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card code {
+    display: block;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Medium Screens */
+@media (max-width: 900px) {
+    .cheat-sheet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Screens */
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .cheat-sheet {
+        display: block;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 10px 20px;
+        margin-bottom: 15px;
+        padding: 18px;
+    }
+
+    .card h2 {
+        grid-row: span 2;
+        margin: 0;
+        align-self: center;
+        font-size: 18px;
+    }
+
+    .card p {
+        margin: 0;
+    }
+
+    .card code {
+        margin-top: 5px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 500px) {
+
+    .card {
+        display: block;
+    }
+
+    .card h2 {
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        margin-bottom: 10px;
+    }
+}
+

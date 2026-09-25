@@ -1,0 +1,126 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">ResponsiveWeb</div>
+
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#cheat">Cheat Sheet</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Image Gallery -->
+        <section class="section gallery" id="gallery">
+            <h2>Image Gallery</h2>
+
+            <div class="gallery-grid">
+                <div class="image-card">
+                    <img src="https://picsum.photos/400/250?random=1" alt="Responsive Design">
+                    <h3>Responsive Layout</h3>
+                </div>
+
+                <div class="image-card">
+                    <img src="https://picsum.photos/400/250?random=2" alt="Web Design">
+                    <h3>Modern Web</h3>
+                </div>
+
+                <div class="image-card">
+                    <img src="https://picsum.photos/400/250?random=3" alt="CSS Grid">
+                    <h3>CSS Grid</h3>
+                </div>
+
+                <div class="image-card">
+                    <img src="https://picsum.photos/400/250?random=4" alt="Flexbox">
+                    <h3>Flexbox</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Design Explanation -->
+        <section class="section explanation" id="about">
+            <h2>Responsive Design</h2>
+
+            <p>
+                Responsive web design is an approach that allows websites
+                to adjust their layout and content according to different
+                screen sizes and devices.
+            </p>
+
+            <p>
+                CSS Grid can be used for page layouts, while Flexbox is
+                useful for navigation and arranging elements in a row or
+                column.
+            </p>
+
+            <p>
+                Media queries allow developers to apply different CSS
+                rules for desktops, tablets, and mobile devices.
+            </p>
+
+            <div class="example">
+                <strong>Example:</strong>
+                <code>@media (max-width: 700px) { }</code>
+            </div>
+        </section>
+
+        <!-- Cheat Sheet Preview -->
+        <section class="section cheat-sheet" id="cheat">
+            <h2>CSS Cheat Sheet</h2>
+
+            <div class="cheat-grid">
+
+                <div class="cheat-card">
+                    <h3>Flexbox</h3>
+                    <p>Used to arrange elements in rows or columns.</p>
+                    <code>display: flex;</code>
+                </div>
+
+                <div class="cheat-card">
+                    <h3>Grid</h3>
+                    <p>Creates rows and columns for page layouts.</p>
+                    <code>display: grid;</code>
+                </div>
+
+                <div class="cheat-card">
+                    <h3>Media Query</h3>
+                    <p>Changes styles according to screen size.</p>
+                    <code>@media (max-width: 700px)</code>
+                </div>
+
+                <div class="cheat-card">
+                    <h3>Transition</h3>
+                    <p>Creates smooth changes between CSS states.</p>
+                    <code>transition: 0.3s;</code>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>Email: responsive@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>© 2026 Responsive Web Demo</p>
+    </footer>
+
+</body>
+</html>
+```
