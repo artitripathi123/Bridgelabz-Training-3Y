@@ -1,0 +1,59 @@
+
+body {
+    background-color: #f4f6fb;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #212529;
+    font-weight: bold;
+}
+
+.pricing-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18) !important;
+}
+
+.price {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.features li {
+    padding: 10px 0;
+}
+
+.pro-card {
+    transform: scale(1.03);
+}
+
+.pro-card:hover {
+    transform: scale(1.03) translateY(-10px);
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 767px) {
+    .pro-card {
+        transform: none;
+    }
+
+    .pro-card:hover {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,133 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fc;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0d6efd, #39a9db);
+    color: white;
+    padding: 65px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Section Headings */
+h2 {
+    font-weight: bold;
+    color: #17324d;
+}
+
+/* Carousel */
+.carousel {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.destination-img {
+    height: 480px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    padding: 15px;
+    bottom: 35px;
+}
+
+.carousel-caption h3 {
+    font-weight: bold;
+}
+
+/* Booking Progress */
+.booking-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.progress {
+    height: 28px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    background-color: #17324d;
+    margin-top: 50px;
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .destination-img {
+        height: 320px;
+    }
+
+    .carousel-caption {
+        bottom: 20px;
+        padding: 10px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 20px;
+    }
+
+    .carousel-caption p {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    .booking-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .destination-img {
+        height: 260px;
+    }
+
+    .carousel-caption {
+        bottom: 15px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 16px;
+    }
+
+    .carousel-caption p {
+        font-size: 11px;
+    }
+}
